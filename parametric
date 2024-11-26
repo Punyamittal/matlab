@@ -1,0 +1,12 @@
+clc
+clear all
+close all
+syms x y
+t=linspace(0,0.1,2*pi)
+x=2*sin(t)+2
+y=2*cos(t)+2
+axis equal
+plot(x,y,"k*-")
+xlabel("x")
+ylabel("y")
+title("parametric figure")
