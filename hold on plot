@@ -1,0 +1,8 @@
+clc
+clear all
+close all
+x=linspace(0,1)
+plot(x,x.^2,"r*")
+hold on
+plot(x,exp(x),"k*-")
+legend("x.^2","exp(x)")
