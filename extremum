@@ -1,0 +1,35 @@
+clc
+clear all
+close all
+syms x real
+f=input("enter the function f(x)")
+fx=diff(f,x)
+c=solve(fx)
+cmax=max(double(c))
+cmin=min(double(c))
+ezplot(f,[cmin-2,cmax+2])
+for i=1:1:size(c)
+    t1=subs(fxx,x,c(i))
+    t3=subs(f,x,c(i))
+    if double(t1)==0
+        sprintf("The point x is %d inflection point",double(c(i)))
+    else
+        if (double(T1)<0)
+            sprintf('The maximum point of x is %d', double(c(i)))
+            sprintf('The value of the function is %d', double(T3))
+        else
+            sprintf('The minimum point x is %d', double(c(i)))
+            sprintf('The value of th function is %d')
+            double(T3)
+        end
+    end
+    plot(double(c(i)), double(T3), 'r*', 'markersize', 15);
+end
+pause
+h = ezplot(fx,[cmin-2,cmax+2])
+set(h,'color','r')
+hold on
+pause
+e = ezplot(fxx,[cmin-4,cmax+4])
+set(e,'color','g')
+hold off
