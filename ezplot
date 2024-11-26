@@ -1,0 +1,9 @@
+clc
+clear all
+close all
+syms x
+f=cos(x)+sin(x)
+figure(1)
+ezplot(f)
+figure(2)
+explot(f,[0,3])
