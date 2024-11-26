@@ -1,0 +1,15 @@
+clc
+clear all
+close all
+syms x y
+y=input("enter the function")
+x1=input("enter the point of tangent)
+d=[x1-2,x1+2]
+ezplot(y,d)
+hold on
+yd=diff(y,x)
+slope=subs(yd,x,x1)
+y1=subs(y,x,x1)
+plot(x1,y1,"ko")
+tgt=slope*(x-x1)+y1
+ezplot(tgt,d)
